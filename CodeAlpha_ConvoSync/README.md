@@ -1,73 +1,255 @@
-# React + TypeScript + Vite
+# 🚀 ConvoSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern real-time video conferencing and collaboration platform built with React, TypeScript, Node.js, Socket.IO, and WebRTC.
 
-Currently, two official plugins are available:
+ConvoSync enables users to create secure meeting rooms, communicate through high-quality video and audio, collaborate using a real-time whiteboard, and manage meetings through a clean, responsive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ConvoSync is designed to provide a seamless online collaboration experience. Users can create an account, join or create meeting rooms, communicate through live video and audio, and collaborate using an interactive whiteboard.
 
-## Expanding the ESLint configuration
+The project combines modern frontend technologies with a Node.js backend, MongoDB authentication, Socket.IO real-time communication, and WebRTC peer-to-peer media streaming.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔐 Authentication
+- User Registration
+- Secure Login
+- JWT Authentication
+- Password Hashing using bcrypt
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🎥 Video Conferencing
+- Create meeting rooms
+- Join existing rooms
+- Real-time peer-to-peer video calls
+- Audio controls
+- Video controls
+- Screen sharing
+
+### 🎨 Collaborative Whiteboard
+- Real-time drawing
+- Multi-user collaboration
+- Color selection
+- Live synchronization
+
+### 💬 Collaboration
+- Room-based communication
+- Participant management
+- Live meeting experience
+
+### 🎨 UI Features
+- Dark Theme
+- Light Theme
+- Glass Theme
+- Responsive Design
+- Smooth Animations (Framer Motion)
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- Framer Motion
+- Socket.IO Client
+- Simple Peer (WebRTC)
+- Lucide React Icons
+
+## Backend
+
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB
+- Mongoose
+- Socket.IO
+- JWT Authentication
+- bcrypt
+
+---
+
+# 📂 Project Structure
+
+```
+ConvoSync
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── ThemeContext.tsx
+│   ├── socket.ts
+│   └── App.tsx
+│
+├── server/
+│   ├── models/
+│   ├── server.ts
+│   └── package.json
+│
+├── package.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# ⚙ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Clone Repository
+
+```bash
+git clone https://github.com/Apoorv-Gaurav/CodeAlpha_ConvoSync.git
+
+cd CodeAlpha_ConvoSync
 ```
+
+---
+
+## Install Frontend
+
+```bash
+npm install
+```
+
+---
+
+## Install Backend
+
+```bash
+cd server
+
+npm install
+```
+
+---
+
+# 🔑 Environment Variables
+
+## Frontend (.env)
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+---
+
+## Backend (.env)
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+```
+
+---
+
+# ▶ Running the Project
+
+## Start Backend
+
+```bash
+cd server
+
+npm run dev
+```
+
+---
+
+## Start Frontend
+
+```bash
+npm run dev
+```
+
+Open
+
+```
+http://localhost:5173
+```
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here.
+
+Example:
+
+```
+screenshots/
+
+├── login.png
+├── dashboard.png
+├── room.png
+├── whiteboard.png
+```
+
+---
+
+# 🌟 Core Functionalities
+
+- Secure Authentication
+- JWT Login Sessions
+- Video Calling
+- Audio Controls
+- Camera Controls
+- Screen Sharing
+- Collaborative Whiteboard
+- Theme Switching
+- Responsive Interface
+- MongoDB User Storage
+- Real-time Socket Communication
+
+---
+
+# 🔒 Security
+
+- Passwords encrypted using bcrypt
+- JWT-based authentication
+- MongoDB secure storage
+- Protected API endpoints
+
+---
+
+# 🚀 Future Improvements
+
+- Meeting Chat
+- File Sharing
+- Meeting Recording
+- Raise Hand Feature
+- Waiting Room
+- User Profiles
+- Meeting History
+- Calendar Integration
+- Notifications
+- Admin Controls
+
+---
+
+# 👨‍💻 Author
+
+**Apoorv Gaurav**
+
+GitHub:
+https://github.com/Apoorv-Gaurav
+
+---
+
+# 📄 License
+
+This project was developed as part of the **CodeAlpha Internship Program** and is intended for educational and portfolio purposes.
+
+---
+
+## ⭐ If you found this project useful, consider giving it a Star!
